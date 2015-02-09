@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<h1>
+  Title:
+  <strong><%= @destination.city %></strong>
+</h1>
+
+<%= image_tag @destination.avatar.url (:medium)%>
+
+<h3>
+	Price:
+	<strong>$<%= @destination.population %></strong>
+</h3>
+
+<h3>
+  Medium:
+  <strong><%= @destination.country %></strong>
+</h3>
+
+<p>
+  Description:
+  <%= @destination.description %>
+</p>
+
+<div class = 'btn-group'>
+<p>
+<%= link_to 'Edit', edit_destination_path(@destination), class: 'btn btn-default'%> 
+<%= link_to 'Back to Gallery', destinations_path, class: 'btn btn-default'%>
+</p>
+</div>
