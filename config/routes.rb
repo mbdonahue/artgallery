@@ -1,17 +1,11 @@
 Rails.application.routes.draw do
-  resources :destinations
+  
 
-  resources :countries
-
-  resources :activities
-
-  root 'welcome#places'
-
-  get 'bucket_list' => 'welcome#bucket_list'
+  root 'destinations#index'
 
   get 'information' => 'welcome#information'
 
-
+  resources :destinations
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
