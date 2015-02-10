@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   
 
+  devise_for :users
   root 'destinations#index'
 
   get 'information' => 'welcome#information'
